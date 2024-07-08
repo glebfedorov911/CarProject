@@ -13,9 +13,3 @@ class OwnerCreate(OwnerBase):
 
 class OwnerUpdate(OwnerCreate):
     pass
-
-class Owner(OwnerBase):
-    model_config = ConfigDict(from_attributes = True)
-
-    id: int
-    car: list
