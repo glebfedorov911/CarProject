@@ -6,7 +6,7 @@ from core.models import db_helper, Owner
 from .schemas import OwnerCreate, OwnerUpdate
 from . import crud
 
-router = APIRouter(tags=['Owners'])
+router = APIRouter(tags=['Owners'], prefix='/owner')
 
 @router.post('/create_owner/', status_code=status.HTTP_201_CREATED)
 async def create_owner(owner_in: OwnerCreate, session: AsyncSession = Depends(db_helper.session_dependency)):
